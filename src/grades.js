@@ -1,14 +1,20 @@
 const readlineSync = require("readline-sync");
 
-const homework = readlineSync.question("\nEnter three homework grades.\n");
+let homework = Number(readlineSync.question("\nEnter three homework grades.\n"));
+homework = homework + Number(readlineSync.question());
+homework = homework + Number(readlineSync.question());
 
-const quiz = readlineSync.question("\nEnter three quiz grades.\n");
+let quiz = Number(readlineSync.question("\nEnter three quiz grades.\n"));
+quiz = quiz + Number(readlineSync.question());
+quiz = quiz + Number(readlineSync.question());
 
-const test = readlineSync.question("\nEnter three test grades.\n");
+let test = Number(readlineSync.question("\nEnter three test grades.\n"));
+test = test + Number(readlineSync.question());
+test = test + Number(readlineSync.question());
 
-const weightedhomework = (homework*0.15)
-const weightedquiz = (quiz*0.35)
-const weightedtest = (test*0.50)
-const grade = (weightedhomework*weightedquiz*weightedtest)
+const weightedhomework = ((homework/3)*0.15);
+const weightedquiz = ((quiz/3)*0.35);
+const weightedtest = ((test/3)*0.50);
+const grade = (weightedhomework+weightedquiz+weightedtest).toLocaleString("en", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-console.log("\nYour marking period grade is "+ grade + ".")
+console.log("\nYour marking period grade is "+ grade + "%.")
