@@ -3,6 +3,8 @@ const students = Number(readlineSync.question("\nStudents: "));
 const teachers = Number(readlineSync.question("Teachers: "));
 const capacity = Number(readlineSync.question("Bus Capacity: "));
 
-const bus = Number(students/capacity);
+const totalpeople = Number(students + teachers).toLocaleString("en", {minimumFractionDigits:0, maximumFractionDigits:0});
+const buses= Number(totalpeople / capacity).toLocaleString("en", {minimumFractionDigits:0, maximumFractionDigits:0});
+const passengers= Number(totalpeople % capacity).toLocaleString("en", {minimumFractionDigits:0, maximumFractionDigits:0}); 
 
-console.log( bus + " bus(es) is (are) needed, with" + passengers + " passenger(s) on the last bus.")
+console.log( buses + " bus(es) is (are) needed, with" + passengers + " passenger(s) on the last bus.")
