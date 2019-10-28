@@ -12,4 +12,4 @@ const sunday = Number(readlineSync.question("Sunday: "));
 const hours = Number(monday+tuesday+wednesday+thursday+friday+saturday+sunday);
 const week = (hours*hourlywage).toLocaleString("en", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-console.log("You'll make $" + week + " this week.")
+console.log("\nYou'll make $" + week + " this week.")
