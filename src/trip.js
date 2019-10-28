@@ -2,7 +2,7 @@ const readlineSync = require("readline-sync");
 
 const students = Number(readlineSync.question("\nStudents: "));
 const teachers = Number(readlineSync.question("Teachers: "));
-const capacity = Number(readlineSync.question("Bus Capacity: "));
+const capacity = Number(readlineSync.question("Bus capacity: "));
 
 const totalpeople = Number(students + teachers).toLocaleString("en", {minimumFractionDigits:0, maximumFractionDigits:0});
 const buses= Number(totalpeople / capacity).toLocaleString("en", {minimumFractionDigits:0, maximumFractionDigits:0});
